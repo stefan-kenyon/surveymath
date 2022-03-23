@@ -1,6 +1,10 @@
 import './App.css';
 
+import { randomNumber, dmsNumber } from './utility/numberFunction'
+
 function App() {
+  let number = dmsNumber();
+  console.log(number)
   return (
     <div className="App">
       <header>
@@ -12,6 +16,7 @@ function App() {
         <p>Functions that create dd-mm-ss numbers</p>
         <p>Functions that add/subtract dd-mm-ss numbers</p>
       
+        <p>{number.degrees}-{number.minutes}-{number.seconds}</p>
       </header>
     </div>
   );
