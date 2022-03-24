@@ -1,5 +1,13 @@
+p, h1, h2, h3, h4, h5, h6 {
+  padding:0px;
+  margin:0px;
+}
+
+
 .App {
-  text-align: center;
+  text-align: left;
+  width:1000px;
+  margin:0 auto;
 }
 
 .App-logo {
@@ -35,4 +43,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+main {
+  display:flex;
+}
+
+.main-left {
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.add-main, .subtract-main {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:30px;
 }
