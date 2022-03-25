@@ -7,6 +7,8 @@ function Add() {
   const [number1, setNumber1] = useState(dmsNumber);
   const [number2, setNumber2] = useState(dmsNumber);
   const [addedNumbers, setAddedNumbers] = useState(addDMSNumbers(number1, number2));
+  const [guess, setGuess] = useState<number>(0);
+
   return (
     <div className="Add">
 
@@ -21,6 +23,8 @@ function Add() {
           
           <p>Number 1: {number1[0]}-{number1[1]}-{number1[2]}</p>
           <p>Number 2: {number2[0]}-{number2[1]}-{number2[2]}</p>
+          <br/>
+          <input type='number' value={guess} defaultValue={0} onChange={e => setGuess(Number(e.target.value))}></input>
           <br/>
           <button onClick = {() => setAddedNumbers(addDMSNumbers(number1, number2))}>Add Numbers</button>
           <p>Result: {addedNumbers[0]}-{addedNumbers[1]}-{addedNumbers[2]}</p>

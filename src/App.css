@@ -1,4 +1,4 @@
-p, h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6, header {
   padding:0px;
   margin:0px;
 }
@@ -43,6 +43,11 @@ p, h1, h2, h3, h4, h5, h6 {
   to {
     transform: rotate(360deg);
   }
+}
+
+.sm-title {
+  background-color:#659dbd;
+  padding:10px;
 }
 
 main {

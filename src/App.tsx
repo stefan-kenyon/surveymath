@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header>
         
-        <h1>surveymath</h1>
+        <h1 className='sm-title'>surveymath</h1>
         <p>A site designed to help people learn/practice survey mathematics</p>
       
       </header>
