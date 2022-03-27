@@ -2,6 +2,7 @@ import './App.css';
 
 import Add from './components/Add';
 import Subtract from './components/Subtract';
+import FormInput from './components/FormInput'
 
 function App() {
 
@@ -32,13 +33,14 @@ function App() {
 
           <Add />
           <Subtract />
+          <FormInput />
 
         </div>
         
       </main>
 
       <footer>
-
+        
       </footer>
     </div>
   );

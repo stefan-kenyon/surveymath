@@ -24,7 +24,7 @@ function Add() {
           <p>Number 1: {number1[0]}-{number1[1]}-{number1[2]}</p>
           <p>Number 2: {number2[0]}-{number2[1]}-{number2[2]}</p>
           <br/>
-          <input type='number' value={guess} defaultValue={0} onChange={e => setGuess(Number(e.target.value))}></input>
+          <input type='number' value={guess} onChange={e => setGuess(Number(e.target.value))}></input>
           <br/>
           <button onClick = {() => setAddedNumbers(addDMSNumbers(number1, number2))}>Add Numbers</button>
           <p>Result: {addedNumbers[0]}-{addedNumbers[1]}-{addedNumbers[2]}</p>
