@@ -2,7 +2,7 @@ import './App.css';
 
 import Add from './components/Add';
 import Subtract from './components/Subtract';
-import FormInput from './components/FormInput'
+import Form from './components/Form'
 
 function App() {
 
@@ -22,9 +22,26 @@ function App() {
           <h3>Development</h3>
           
           <ul>
-            <li>Functions that create dd-mm-ss numbers</li>
-            <li>Functions that add/subtract dd-mm-ss numbers</li>
-            <li>Functions that convert dd-mm-ss to decimals and vice versa</li>
+            <li>CST I</li>
+              <ul>
+                <li>Units of Measure</li>
+                  <ul>
+                    <li>Conversion of units</li>
+                  </ul>
+                <li>Angles</li>
+                  <ul>
+                    <li>Angle Addition</li>
+                    <li>Angle Subtraction</li>
+                    <li>Angle Conversion</li>
+                    <li>Interior Angles</li>
+                    <li>Exterior Angles</li>
+                  </ul>
+                <li>Bearings and Azimuths</li>
+                  <ul>
+                    <li>Conversions</li>
+                  </ul>
+              </ul>
+            <li>CST II</li>
           </ul>
         
         </div>
@@ -33,7 +50,7 @@ function App() {
 
           <Add />
           <Subtract />
-          <FormInput />
+          <Form />
 
         </div>
         

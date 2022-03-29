@@ -1,19 +1,35 @@
-//import {useState} from 'react';
+import {useState} from 'react';
 import {useForm, SubmitHandler} from 'react-hook-form';
 
 interface IFormInputs {
-  email:string,
-  password:string
+  degrees:number,
+  minutes:number,
+  seconds:number
 }
 
 function Form() {
 
   const {register, handleSubmit, watch, formState: {errors} } = useForm<IFormInputs>();
+  const [guessedNumber, setGuessedNumber] = useState<Array<number>>([]);
 
+  console.log('watch degrees', watch('degrees'));
   console.log('errors', errors);
-  console.log('watch variable email', watch('email'));
+  // console.log('watch variable email', watch('email'));
   const formSubmitHandler: SubmitHandler<IFormInputs> = (data: IFormInputs) => {
-    console.log('submitted data', data);
+    setGuessedNumber([]);
+    if(data.degrees > 0 || data.minutes > 0 || data.seconds > 0) {
+      //console.log('dd-mm-ss: ' + data.degrees + '-' + data.minutes + '-' + data.seconds);
+      let guess: number[] = [data.degrees, data.minutes, data.seconds];
+      updateGuess(guess);
+    }
+    else {
+
+    }
+  }
+  
+  function updateGuess(guess: number[]) {
+    console.log('someone guessed ', guess);
+    setGuessedNumber(guess);
   }
 
   return (
@@ -26,14 +42,12 @@ function Form() {
         <main className='form-main'>
 
           <form onSubmit={handleSubmit(formSubmitHandler)}>
-            <input defaultValue="example@leo.test.com" {...register('email')} />
-            <br/>
-            <input {...register('password', { required: true })} />
-            <br/>
-            {errors.password && <span>This field is required</span>}
-            <br/>
-            <input type='submit' />
+            <input type='number' min='0' {...register('degrees')} />
+            <input type='number' min='0' max='59' {...register('minutes')} />
+            <input type='number' min='0' max='59' {...register('seconds')} />
+            <input type='submit'/>
           </form>
+          {guessedNumber.length > 1 && <p>{guessedNumber[0] + '-' + guessedNumber[1] + '-' + guessedNumber[2]}</p>}
          
         </main>
     
